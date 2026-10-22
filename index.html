@@ -443,6 +443,47 @@ footer p span {
     padding: 18px;
   }
 }
+
+#theme-toggle {
+  padding: 10px 14px;
+  border: 1px solid #38bdf8;
+  border-radius: 25px;
+  background: transparent;
+  color: #38bdf8;
+  font-size: 14px;
+  cursor: pointer;
+}
+
+#theme-toggle:hover {
+  background: #38bdf8;
+  color: #0f172a;
+}
+
+body.light-mode {
+  background: #f8fafc;
+  color: #0f172a;
+}
+
+body.light-mode .navbar,
+body.light-mode footer {
+  background: #e2e8f0;
+  color: #0f172a;
+}
+
+body.light-mode .nav-links a,
+body.light-mode .project-card h3 {
+  color: #0f172a;
+}
+
+body.light-mode .project-card {
+  background: #ffffff;
+  border-color: #cbd5e1;
+}
+
+body.light-mode .project-card p,
+body.light-mode #about p {
+  color: #334155;
+}
  </style>
 </head>
 <body>
@@ -455,6 +496,9 @@ footer p span {
     <a href="#about">About</a>
     <a href="#contact">Contact</a>
   </div>
+
+<button id="theme-toggle" type="button">☀️ Light Mode</button>
+
 </nav>
   <section class="hero" id="home">
     <h1>Hello, I'm <span>Abdullah!</span></h1>
@@ -525,6 +569,20 @@ footer p span {
   </footer>
 
 <a href="#home" class="back-to-top" aria-label="Back to top">↑</a>
+
+<script>
+  const themeButton = document.getElementById("theme-toggle");
+
+  themeButton.addEventListener("click", function () {
+    document.body.classList.toggle("light-mode");
+
+    if (document.body.classList.contains("light-mode")) {
+      themeButton.textContent = "🌙 Dark Mode";
+    } else {
+      themeButton.textContent = "☀️ Light Mode";
+    }
+  });
+</script>
 
 </body>
 </html>
