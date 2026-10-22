@@ -573,14 +573,31 @@ body.light-mode #about p {
 <script>
   const themeButton = document.getElementById("theme-toggle");
 
-  themeButton.addEventListener("click", function () {
-    document.body.classList.toggle("light-mode");
+  // আগের পছন্দ মনে রাখা
+  const savedTheme = localStorage.getItem("theme");
 
+  if (savedTheme === "light") {
+    document.body.classList.add("light-mode");
+  }
+
+  function updateButton() {
     if (document.body.classList.contains("light-mode")) {
       themeButton.textContent = "🌙 Dark Mode";
     } else {
       themeButton.textContent = "☀️ Light Mode";
     }
+  }
+
+  updateButton();
+
+  themeButton.addEventListener("click", function () {
+    document.body.classList.toggle("light-mode");
+
+    const isLight = document.body.classList.contains("light-mode");
+
+    localStorage.setItem("theme", isLight ? "light" : "dark");
+
+    updateButton();
   });
 </script>
 
