@@ -183,7 +183,33 @@
     font-size: 16px;
     line-height: 1.7;
   }
-} </style>
+} 
+ 
+.hero a {
+  display: inline-block;
+  padding: 14px 28px;
+  background: linear-gradient(90deg, #0284c7, #7c3aed);
+  color: white;
+  text-decoration: none;
+  font-size: 16px;
+  font-weight: bold;
+  border-radius: 30px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  box-shadow: 0 0 12px rgba(56, 189, 248, 0.4);
+}
+
+.hero a:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 0 22px rgba(56, 189, 248, 0.7);
+}
+
+@media screen and (max-width: 600px) {
+  .hero a {
+    padding: 14px 24px;
+    font-size: 16px;
+  }
+}
+ </style>
 </head>
 <body>
 
