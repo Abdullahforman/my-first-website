@@ -301,6 +301,30 @@
   outline: 2px solid #38bdf8;
   outline-offset: 4px;
 }
+
+.back-to-top {
+  position: fixed;
+  right: 18px;
+  bottom: 20px;
+  width: 48px;
+  height: 48px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #38bdf8;
+  color: #0f172a;
+  font-size: 28px;
+  font-weight: bold;
+  text-decoration: none;
+  border-radius: 50%;
+  box-shadow: 0 0 15px rgba(56, 189, 248, 0.5);
+  z-index: 1000;
+  transition: transform 0.3s ease;
+}
+
+.back-to-top:hover {
+  transform: translateY(-4px);
+}
  </style>
 </head>
 <body>
@@ -355,6 +379,8 @@
   <footer>
     <p>© 2026 Abdullah | Built with passion</p>
   </footer>
+
+<a href="#home" class="back-to-top" aria-label="Back to top">↑</a>
 
 </body>
 </html>
