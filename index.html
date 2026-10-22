@@ -265,7 +265,7 @@
   gap: 18px;
   flex-wrap: wrap;
 }
-
+<a href="#portfolio">Portfolio</a>
 .nav-links a {
   color: white;
   text-decoration: none;
@@ -283,8 +283,6 @@
     gap: 20px;
   }
 }
-
-/* Navigation Hover Effect */
 .nav-links a {
   color: white;
   text-decoration: none;
@@ -296,7 +294,6 @@
   color: #38bdf8;
 }
 
-/* Keyboard Focus */
 .nav-links a:focus-visible {
   outline: 2px solid #38bdf8;
   outline-offset: 4px;
@@ -388,6 +385,64 @@ footer p span {
     padding: 10px 16px;
   }
 }
+
+.portfolio {
+  padding: 50px 20px;
+  text-align: center;
+  box-sizing: border-box;
+}
+
+.portfolio h2 {
+  color: #38bdf8;
+  font-size: 28px;
+  margin-bottom: 12px;
+}
+
+.portfolio > p {
+  color: #cbd5e1;
+  line-height: 1.7;
+}
+
+.project-card {
+  max-width: 400px;
+  margin: 25px auto 0;
+  padding: 24px;
+  background: #1e293b;
+  border: 1px solid #334155;
+  border-radius: 16px;
+  box-sizing: border-box;
+  text-align: left;
+}
+
+.project-card h3 {
+  color: white;
+}
+
+.project-card p {
+  color: #cbd5e1;
+  line-height: 1.7;
+}
+
+.project-card a {
+  display: inline-block;
+  margin-top: 10px;
+  padding: 10px 18px;
+  background: #38bdf8;
+  color: #0f172a;
+  border-radius: 25px;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+@media screen and (max-width: 600px) {
+  .portfolio {
+    padding: 35px 18px;
+  }
+
+  .project-card {
+    padding: 18px;
+  }
+}
  </style>
 </head>
 <body>
@@ -423,6 +478,20 @@ footer p span {
     </p>
   </section>
   
+<section id="portfolio" class="portfolio">
+  <h2>My Projects</h2>
+  <p>Here are some of my projects.</p>
+
+  <div class="project-card">
+    <h3>My First Website</h3>
+    <p>A personal website built with HTML and CSS.</p>
+    <a href="https://abdullahforman.github.io/my-first-website/">
+      View Project
+    </a>
+  </div>
+
+</section>
+
 <section id="contact" style="text-align:center; padding:60px 20px;">
   <h2 style="font-size:32px; margin-bottom:15px;">
     Let's Work Together!
